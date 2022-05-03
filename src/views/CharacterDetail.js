@@ -27,7 +27,11 @@ export default function CharacterDetail() {
     <>
       {/* <Link to="">Back to list</Link> */}
       <button onClick={() => historyPop()}>Back</button>
-      <div>CharacterDetail</div>
+      <h2>{character.name}</h2>
+      <h4>
+        {character.status} {character.species}
+      </h4>
+
       <img src={character.image}></img>
     </>
   );
