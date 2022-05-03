@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 export default function CharacterDetail() {
   const [character, setCharacter] = useState({});
@@ -21,6 +21,7 @@ export default function CharacterDetail() {
 
   return (
     <>
+      <Link to="">Back to list</Link>
       <div>CharacterDetail</div>
       <img src={character.image}></img>
     </>
