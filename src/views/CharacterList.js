@@ -5,7 +5,7 @@ export default function CharacterList() {
 
   useEffect(() => {
     const fetchCharacters = async () => {
-      const res = await fetch(`https://rickandmortyapi.com/api/character`);
+      const res = await fetch(`https://rickandmortyapi.com/api/character/`);
       const results = await res.json();
       setCharacters(results.results);
     };
@@ -13,5 +13,14 @@ export default function CharacterList() {
   }, []);
   console.log(characters);
 
-  return <div>CharacterList</div>;
+  return (
+    <>
+      <div>CharacterList</div>
+      <ul>
+        {characters.map((character) => (
+          <li key={character.id}>{character.name}</li>
+        ))}
+      </ul>
+    </>
+  );
 }
