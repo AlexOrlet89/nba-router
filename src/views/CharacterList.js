@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function CharacterList() {
   const [characters, setCharacters] = useState([]);
@@ -23,7 +24,9 @@ export default function CharacterList() {
       ) : (
         <ul>
           {characters.map((character) => (
-            <li key={character.id}>{character.name}</li>
+            <Link to={`/character/${character.id}`}>
+              <li key={character.id}>{character.name}</li>
+            </Link>
           ))}
         </ul>
       )}
