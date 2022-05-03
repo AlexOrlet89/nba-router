@@ -1,0 +1,13 @@
+* {
+  text-align: center;
+}
+ul,
+li,
+h2,
+h4 {
+  list-style: none;
+  background-color: rgba(227, 234, 248, 0.405);
+}
+div {
+  background-image: url('/public/background.jpg');
+}
