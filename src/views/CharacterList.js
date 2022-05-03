@@ -13,7 +13,7 @@ export default function CharacterList() {
     };
     fetchCharacters();
   }, []);
-  console.log(characters);
+  // console.log(characters);
 
   return (
     <>
