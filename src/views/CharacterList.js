@@ -24,8 +24,8 @@ export default function CharacterList() {
       ) : (
         <ul>
           {characters.map((character) => (
-            <Link to={`/character/${character.id}`}>
-              <li key={character.id}>{character.name}</li>
+            <Link key={character.id} to={`/character/${character.id}`}>
+              <li>{character.name}</li>
             </Link>
           ))}
         </ul>
